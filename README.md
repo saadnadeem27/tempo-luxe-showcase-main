@@ -33,9 +33,9 @@
 - **Component Architecture** - Modular, reusable React components
 - **Modern Routing** - React Router with protected routes
 
-## 🚀 Live Demo
+<!-- ## 🚀 Live Demo
 
-**[View Live Demo →](https://lovable.dev/projects/83705b14-c4b2-49f0-9aec-521b4d631048)**
+**[View Live Demo →](link here)** -->
 
 ## 🛠️ Tech Stack
 
@@ -159,9 +159,6 @@ src/
 - [ ] Mobile app version
 - [ ] Offline mode support
 
-## 📝 License
-
-This project is built with [Lovable](https://lovable.dev) - an AI-powered web development platform.
 
 ## 🤝 Contributing
 
