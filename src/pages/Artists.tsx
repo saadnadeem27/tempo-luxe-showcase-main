@@ -3,6 +3,10 @@ import { Badge } from "@/components/ui/badge";
 import { Play, Heart, Users, Music } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import lunaRayImage from "@/assets/artist-luna-ray.jpg";
+import neonBeatsImage from "@/assets/artist-neon-beats.jpg";
+import sereneSoundsImage from "@/assets/artist-serene-sounds.jpg";
+import urbanEchoImage from "@/assets/artist-urban-echo.jpg";
 
 const Artists = () => {
   const featuredArtists = [
@@ -13,7 +17,7 @@ const Artists = () => {
       followers: "2.5M",
       tracks: 45,
       verified: true,
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=200&h=200&fit=crop&crop=face"
+      avatar: lunaRayImage
     },
     {
       id: 2,
@@ -22,7 +26,7 @@ const Artists = () => {
       followers: "1.8M",
       tracks: 32,
       verified: true,
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face"
+      avatar: neonBeatsImage
     },
     {
       id: 3,
@@ -31,7 +35,7 @@ const Artists = () => {
       followers: "980K",
       tracks: 28,
       verified: false,
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face"
+      avatar: sereneSoundsImage
     },
     {
       id: 4,
@@ -40,7 +44,7 @@ const Artists = () => {
       followers: "3.2M",
       tracks: 67,
       verified: true,
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face"
+      avatar: urbanEchoImage
     }
   ];
 
@@ -80,9 +84,11 @@ const Artists = () => {
                     <div className="relative p-8 text-center">
                       <div className="relative mx-auto mb-6">
                         <div className="w-32 h-32 mx-auto rounded-full bg-gradient-primary p-1">
-                          <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
-                            <Users className="h-12 w-12 text-muted-foreground" />
-                          </div>
+                          <img
+                            src={artist.avatar}
+                            alt={artist.name}
+                            className="w-full h-full rounded-full object-cover"
+                          />
                         </div>
                         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                           <Button variant="gradient" size="icon" className="h-16 w-16 shadow-glow">

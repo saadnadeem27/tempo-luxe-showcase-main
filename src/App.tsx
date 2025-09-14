@@ -8,7 +8,12 @@ import Browse from "./pages/Browse";
 import Playlists from "./pages/Playlists";
 import Artists from "./pages/Artists";
 import Profile from "./pages/Profile";
+import Search from "./pages/Search";
+import Library from "./pages/Library";
+import Discover from "./pages/Discover";
+import Charts from "./pages/Charts";
 import NotFound from "./pages/NotFound";
+import MusicPlayer from "./components/MusicPlayer";
 
 const queryClient = new QueryClient();
 
@@ -18,15 +23,22 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/browse" element={<Browse />} />
-          <Route path="/playlists" element={<Playlists />} />
-          <Route path="/artists" element={<Artists />} />
-          <Route path="/profile" element={<Profile />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <div className="relative">
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/browse" element={<Browse />} />
+            <Route path="/search" element={<Search />} />
+            <Route path="/library" element={<Library />} />
+            <Route path="/discover" element={<Discover />} />
+            <Route path="/charts" element={<Charts />} />
+            <Route path="/playlists" element={<Playlists />} />
+            <Route path="/artists" element={<Artists />} />
+            <Route path="/profile" element={<Profile />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+          <MusicPlayer />
+        </div>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
